@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 
 public class DatabaseHandler extends Configs {
     Connection dbConnection;
@@ -15,7 +16,6 @@ public class DatabaseHandler extends Configs {
                 "&useSSL=false"+
                 "&requireSSL=false"+
                 "&useLegacyDatetimeCode=false"+
-                "&allowPublicKeyRetrieval=true"+
                 "&amp"+
                 "&serverTimezone=UTC";
 
@@ -47,5 +47,26 @@ public class DatabaseHandler extends Configs {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public ResultSet getUser(User user) {
+        ResultSet resSet = null;
+
+        String select = "SELECT * FROM USERS WHERE " +
+                Const.USERS_LOGIN + "=? AND " + Const.USERS_PASSWORD + "=?";
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, user.getLogin());
+            prSt.setString(2, user.getPassword());
+
+            resSet = prSt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resSet;
     }
 }

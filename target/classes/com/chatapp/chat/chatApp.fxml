@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -21,42 +14,21 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatapp.chat.ChatController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatapp.chat.ChatController">
    <left>
       <HBox prefHeight="720.0" prefWidth="356.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="92.0" styleClass="dark-grey-background" stylesheets="@style.css">
                <children>
                   <Pane layoutX="10.0" layoutY="230.0" prefHeight="230.0" prefWidth="92.0" />
-                  <ImageView fitHeight="48.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/icon.php.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="37.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/%5BCITYPNG.COM%5DAddress%20Contact%20Book%20White%20Icon%20FREE%20PNG%20-%201600x1600.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <Pane prefHeight="200.0" prefWidth="69.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <ImageView fitHeight="48.0" fitWidth="38.0" layoutX="16.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="exitButton" fitHeight="48.0" fitWidth="38.0" layoutX="14.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@assets/pngegg.png" />
+                              <Image url="@assets/transparent-exit-icon-essential-set-icon-5d690a78b64c41.4367357515671650487467.png" />
                            </image>
                         </ImageView>
                      </children></Pane>
-                  <ImageView fitHeight="48.0" fitWidth="38.0" layoutX="37.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@assets/transparent-exit-icon-essential-set-icon-5d690a78b64c41.4367357515671650487467.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </ImageView>
                </children>
             </VBox>
             <VBox prefHeight="720.0" prefWidth="310.0" styleClass="grey-background" stylesheets="@style.css">

@@ -15,6 +15,8 @@ public class User {
         this.number = number;
     }
 
+    public User() {}
+
     public String getFirstName() {
         return firstName;
     }
